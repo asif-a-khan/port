@@ -1,0 +1,50 @@
+header {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  section {
+    background-color: $aqua;
+    &:nth-of-type(2) {
+      background-color: $lightBlack;
+    }
+  }
+  .proImgSection {
+  } .eliptical{
+    position: relative;
+    top: -100px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: $lightBlack;
+    display: grid;
+    place-items: center;
+    .innerEliptical {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      background-color: $aqua;
+    }
+  }
+  .network {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0 25px;
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+    h2 {
+      color: $aqua;
+      font-size: 40px;
+      margin-bottom: 0;
+    }
+  }
+}
