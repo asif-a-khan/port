@@ -309,11 +309,11 @@ a:hover {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2.5fr 5fr;
-      grid-template-columns: 2.5fr 5fr;
+  grid-template-columns: 2.5fr 5fr;
 }
 
 .mainWrap header {
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .mainWrap main {
@@ -323,7 +323,7 @@ a:hover {
 }
 
 header {
-  height: 100%;
+  max-height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 3fr 1fr;
@@ -336,6 +336,25 @@ header section {
 
 header section:nth-of-type(2) {
   background-color: #141414;
+}
+
+header .proImgSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+header .proImgSection figure {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-height: 600px;
+  max-width: 450px;
+  min-height: 450px;
+  min-width: 350px;
 }
 
 header .eliptical {
@@ -359,11 +378,15 @@ header .eliptical .innerEliptical {
 }
 
 header .network {
+  background-color: #0E0E0E;
+  padding: 20px;
   display: -ms-grid;
   display: grid;
   place-items: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+  grid-auto-rows: 50px;
+  grid-row-gap: 25px;
 }
 
 header .network ul {
@@ -385,7 +408,9 @@ header .network ul li a {
 header .network h2 {
   color: #19D5B2;
   font-size: 40px;
-  margin-bottom: 0;
+  margin: 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .intro {
@@ -493,8 +518,8 @@ header .network h2 {
 }
 
 .about {
-  height: 100vh;
-  max-height: 100vh;
+  height: 100%;
+  max-height: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
@@ -530,6 +555,10 @@ header .network h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.about .bioEduAndExp .bio h2 {
+  font-size: 50px;
 }
 
 .about .bioEduAndExp .bio p {
@@ -773,4 +802,363 @@ header .network h2 {
   height: inherit;
   width: 75%;
   background-color: #19D5B2;
+}
+
+.projects {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 4fr;
+      grid-template-rows: 1fr 4fr;
+}
+
+.projects .header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
+
+.projects .header h2 {
+  font-size: 50px;
+  color: #19D5B2;
+  margin-bottom: 0;
+}
+
+.projects .header .circles {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row-align: center;
+      align-self: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background-color: #19D5B2;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.projects .header .circles .inner {
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  background-color: #141414;
+}
+
+.projects .projectsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 25px;
+  padding: 20px;
+}
+
+.projects .projectsContainer .projectInfo {
+  background-color: #0E0E0E;
+  padding: 10px;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  grid-column-gap: 25px;
+}
+
+.projects .projectsContainer .projectInfo figure {
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.projects .projectsContainer .projectInfo .first {
+  background-image: url("../../assets/pokemon.jpg");
+}
+
+.projects .projectsContainer .projectInfo .second {
+  background-image: url("../../assets/zoltarReturns.jpg");
+}
+
+.projects .projectsContainer .projectInfo .textWrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.projects .projectsContainer .projectInfo .textWrap h3 {
+  font-size: 30px;
+  color: #19D5B2;
+  margin: 0;
+}
+
+.projects .projectsContainer .projectInfo .textWrap h4 {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.projects .projectsContainer .projectInfo .textWrap p {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.projects .projectsContainer .projectInfo .textWrap h5 {
+  color: #19D5B2;
+  font-size: 18px;
+  margin: 0;
+}
+
+.contact {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+}
+
+.contact .contactHeaderAndForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 3fr;
+      grid-template-rows: 1fr 3fr;
+  padding: 20px;
+}
+
+.contact .contactHeaderAndForm .header2 h2 {
+  font-size: 50px;
+  color: #19D5B2;
+}
+
+.contact .contactHeaderAndForm .contactForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contactHeaderAndForm .contactForm form input {
+  width: 100%;
+  background-color: #141414;
+  border: solid 1px #19D5B2;
+  margin: 10px 0;
+  height: 50px;
+  color: #19D5B2;
+  padding: 5px 20px;
+}
+
+.contact .contactHeaderAndForm .contactForm form textarea {
+  background-color: #141414;
+  color: #19D5B2;
+  border: solid 1px #19D5B2;
+  width: 100%;
+  padding: 20px 20px;
+  margin: 10px 0;
+}
+
+.contact .contactHeaderAndForm .contactForm form button {
+  margin: 10px 0;
+  width: 100%;
+  height: 50px;
+  background-color: #19D5B2;
+  color: #FFFFFF;
+  border: none;
+}
+
+.contact .lastDiv {
+  padding: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 3fr;
+      grid-template-rows: 2fr 3fr;
+  background-color: #0E0E0E;
+}
+
+.contact .lastDiv .circles {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background-color: #19D5B2;
+}
+
+.contact .lastDiv .circles .inner {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: #0E0E0E;
+}
+
+@media only screen and (max-width: 1300px) {
+  .mainWrap {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mainWrap .header1 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .mainWrap .header1 .proImgSection {
+    overflow: hidden;
+  }
+  .mainWrap .header1 .network {
+    place-items: center;
+    grid-auto-rows: auto;
+  }
+  .mainWrap .header1 .network h2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .mainWrap .header1 .network ul {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .mainWrap main {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    overflow: visible;
+  }
+  .mainWrap main .intro {
+    min-height: 100vh;
+    max-height: 100vh;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .mainWrap main .about {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+  .mainWrap main .contact {
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main .about {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main .about .skills {
+    display: none;
+  }
+  main .projects .projectsContainer .projectInfo {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main .projects .projectsContainer .projectInfo figure {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .intro {
+    padding: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .intro article {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  .intro article .nameTitle .textWrap .buttonWrap {
+    grid-column-gap: 25px;
+  }
+  .intro article .circles {
+    display: none;
+  }
+  .intro .figureContainer {
+    display: none;
+  }
+  .about .bioEduAndExp {
+    padding: 0;
+  }
+  .about .bioEduAndExp .edu, .about .bioEduAndExp .exp {
+    display: none;
+  }
+  .about .bioEduAndExp .bio {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about .bioEduAndExp .bio h2 {
+    margin: 0;
+  }
+  .about .bioEduAndExp .bio .buttonWrap {
+    -ms-grid-columns: 25px;
+        grid-template-columns: 25px;
+  }
+  .projects .header .circles {
+    display: none;
+  }
+  .projects .projectsContainer .projectInfo:nth-of-type(3) {
+    display: none;
+  }
+  .projects .projectsContainer .projectInfo p {
+    display: none;
+  }
+  .first, .second {
+    display: none;
+  }
+  .header2 h2 {
+    margin: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .contact {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .contact .lastDiv {
+    display: none;
+  }
+  .contact .contactForm {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }

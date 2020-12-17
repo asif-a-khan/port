@@ -1,5 +1,5 @@
 header {
-  height: 100%;
+  max-height: 100vh;
   display: grid;
   grid-template-rows: 3fr 1fr;
   section {
@@ -9,6 +9,17 @@ header {
     }
   }
   .proImgSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    figure {
+      justify-self: center;
+      align-self: center;
+      // border: solid 1px red;
+      max-height: 600px;
+      max-width: 450px;
+      min-height: 450px;
+      min-width: 350px;
+    }
   } .eliptical{
     position: relative;
     top: -100px;
@@ -27,9 +38,13 @@ header {
     }
   }
   .network {
+    background-color: $black;
+    padding: 20px;
     display: grid;
     place-items: center;
     grid-template-columns: 1fr;
+    grid-auto-rows: 50px;
+    grid-row-gap: 25px;
     ul {
       display: flex;
       margin: 0;
@@ -44,7 +59,8 @@ header {
     h2 {
       color: $aqua;
       font-size: 40px;
-      margin-bottom: 0;
+      margin: 0;
+      justify-self: center;
     }
   }
 }
