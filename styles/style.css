@@ -1141,7 +1141,8 @@ header .network h2 {
   .about .bioEduAndExp .bio h2 {
     margin: 0;
   }
-  .about .bioEduAndExp .bio .buttonWrap {
+  .about .bioEduAndExp .bio p
+.buttonWrap {
     -ms-grid-columns: 25px;
         grid-template-columns: 25px;
   }
