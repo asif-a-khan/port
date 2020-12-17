@@ -1089,8 +1089,8 @@ header .network h2 {
 }
 
 @media only screen and (max-width: 700px) {
-  .header1 {
-    min-height: 100vh;
+  .mainWrap .header1 {
+    max-height: 900px;
   }
   .intro {
     padding: 0;
