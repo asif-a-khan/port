@@ -1092,6 +1092,9 @@ header .network h2 {
   .mainWrap .header1 {
     max-height: 900px;
   }
+  .mainWrap .header1 .network h2 {
+    display: none;
+  }
   .intro {
     padding: 0;
     -ms-grid-columns: 1fr;

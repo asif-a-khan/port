@@ -70,6 +70,9 @@
   .mainWrap .header1 {
     // min-height: 100px;
     max-height: 900px;
+    .network h2{
+      display: none;
+    }
   }
   .intro {
     padding: 0;
