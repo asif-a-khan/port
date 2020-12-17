@@ -73,6 +73,10 @@
     .network h2{
       display: none;
     }
+
+    .network ul {
+      grid-row: 1/2;
+    }
   }
   .intro {
     padding: 0;

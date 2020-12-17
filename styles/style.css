@@ -1095,6 +1095,11 @@ header .network h2 {
   .mainWrap .header1 .network h2 {
     display: none;
   }
+  .mainWrap .header1 .network ul {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
   .intro {
     padding: 0;
     -ms-grid-columns: 1fr;
