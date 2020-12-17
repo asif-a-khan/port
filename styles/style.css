@@ -1141,8 +1141,10 @@ header .network h2 {
   .about .bioEduAndExp .bio h2 {
     margin: 0;
   }
-  .about .bioEduAndExp .bio p
-.buttonWrap {
+  .about .bioEduAndExp .bio p {
+    line-height: 3;
+  }
+  .about .bioEduAndExp .bio .buttonWrap {
     -ms-grid-columns: 25px;
         grid-template-columns: 25px;
   }
