@@ -1089,6 +1089,9 @@ header .network h2 {
 }
 
 @media only screen and (max-width: 700px) {
+  .header1 {
+    min-height: 100vh;
+  }
   .intro {
     padding: 0;
     -ms-grid-columns: 1fr;
