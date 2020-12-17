@@ -118,7 +118,8 @@
         line-height: 3;
       }
       .buttonWrap {
-        grid-template-columns: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
       }
     }
   }
