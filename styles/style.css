@@ -235,6 +235,12 @@ html {
   overflow: hidden;
 }
 
+html {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #141414;
 }
@@ -338,6 +344,8 @@ a:hover {
 }
 
 .root {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -350,6 +358,7 @@ a:hover {
 }
 
 .header1 {
+  scroll-snap-align: start;
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -604,11 +613,19 @@ input {
 }
 
 main {
+  scroll-snap-align: start;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
   width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+}
+
+main section {
+  scroll-snap-align: start;
 }
 
 .intro {
@@ -709,6 +726,7 @@ main {
 }
 
 .contact {
+  scroll-snap-align: start;
   padding: 20px;
   max-height: 100vh;
   height: 100vh;

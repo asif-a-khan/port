@@ -1,7 +1,13 @@
 main {
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  section {
+    scroll-snap-align: start;
+  }
 }
 
 .intro {
@@ -77,6 +83,7 @@ main {
 }
 
 .contact {
+  scroll-snap-align: start;
   padding: 20px;
   max-height: 100vh;
   height: 100vh;

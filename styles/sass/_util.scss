@@ -8,6 +8,8 @@ $blue: #2389f1;
 
 html {
   // overflow: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 body {
   background-color: $lightBlack;
