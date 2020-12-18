@@ -7,6 +7,8 @@ $hotPink: #f12365;
 $blue: #2389f1;
 
 html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   overflow: hidden;
 }
 body {
