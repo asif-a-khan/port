@@ -8,19 +8,33 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
-  <div class="mainWrap">
+  <div class="root">
     <header class="header1">
-      <section class="proImgSection">
-        <div class="eliptical">
-          <div class="innerEliptical">
+      <section class="aquaBackDrop">
+        <nav id="menuArea" class="menuArea">
+          <input type="checkbox" id="menuToggle"></input>
+        
+          <label for="menuToggle" class="menuOpen">
+            <div class="open"></div>
+          </label>
+
+          <div class="menu menuEffects">
+            <label for="menuToggle"></label>
+            <div class="menuContent">
+              <ul>
+                <li><a href="#">MENU 1</a></li>
+                <li><a href="#">MENU 2</a></li>
+                <li><a href="#">MENU 3</a></li>
+                <li><a href="#">MENU 4</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <figure>
+        </nav>
+        <figure class="asifImg">
           <img src="./assets/asifPort.jpg" alt="">
         </figure>
       </section>
       <section class="network">
-        <h2>Connect With Me</h2>
         <ul>
           <li>
             <a href="https://www.instagram.com/codedkhan/">
@@ -43,236 +57,33 @@
             </a>
         </li>
         </ul>
+        <h2 class="h2">Connect With Me</h2>
       </section>
     </header>
     <main>
-      <!-- INTRO SECTION -->
-      <section class="intro">
-        <article class="wrapper">
-          <div class="nameTitle">
-            <div class="textWrap">
-              <h2>Hi There, I'm</h2>
-              <h1>Asif Khan</h1>
-              <h3>Front End Developer</h3>
-              <div class="buttonWrap">
-                <a href="#contact">
-                  <button class="primaryButton">
-                    <p>HIRE ME</p>
-                  </button>
-                </a>
-                <button class="secondaryButton">
-                  <p>DOWNLOAD CV</p>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="circles">
-            <div class="outer">
-              <div class="inner"></div>
-            </div>
-          </div>
-        </article>
-        <div class="figureContainer">
-          <figure>
-          </figure>
-          <figure>
-          </figure>
-        </div>
-      </section>
-      <!-- INTRO END -->
-      <!-- ABOUT SECTION -->
       <section class="about">
-        <article class="bioEduAndExp">
-          <section class="bio">
-            <h2>.about</h2>
-            <p>I'm a 22 year old movie enthusiast, video game fanatic and aspiring masterchef contestant! When it comes to my work, I strive to provide the best user experience possible. Interested in working with me? Leave a message by clicking below!</p>
-            <div class="buttonWrap">
-              <a href="#contact">
-                <button class="primaryButton">
-                  HIRE ME
-                </button>
-              </a>
-              <button class="secondaryButton">
-                DOWNLOAD CV
-              </button>
-            </div>
-          </section>
-          <section class="edu">
-            <h2>.education</h2>
-            <div class="schoolInfoWrap">
-              <div class="schoolInfo">
-                <h3>Comp Sci Bsc</h3>
-                <div class="yearCircleName">
-                  <h4>2020</h4>
-                  <div class="circles">
-                    <div class="inner"></div>
-                  </div>
-                  <h4>UofT</h4>
-                </div>
-              </div>
-              <div class="schoolInfo">
-                <h3>Secondary School Diploma</h3>
-                <div class="yearCircleName">
-                  <h4>2016</h4>
-                  <div class="circles">
-                    <div class="inner"></div>
-                  </div>
-                  <h4>Castlebrooke</h4>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="exp">
-            <h2>.experience</h2>
-            <div class="jobContainer">
-              <div class="jobs">
-                <div class="jobTitle">
-                  <h3>Paragon Security</h3>
-                  <div class="circles"><div class="inner"></div></div>
-                  <h3>2019</h3>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque perspiciatis, beatae iusto fuga numquam laboriosam?</p>
-              </div>
-              <!-- <div class="jobs">
-
-              </div> -->
-            </div>
-          </section>
-        </article>
-        <article class="skills">
-          <section class="circleWrap">
-            <div class="circles">
-              <div class="inner"></div>
-            </div>
-          </section>
-          <section class="techSkills">
-            <h2>.skills</h2>
-            <ul class="techSkillList">
-              <li>
-                <div class="skillAndProgress">
-                  <h4>HTML/CSS</h4>
-                  <h4>85%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress1"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Javascript ES6+ & Jquery</h4>
-                  <h4>90%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress2"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>React/React-Redux</h4>
-                  <h4>80%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress3"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Firebase</h4>
-                  <h4>70%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress4"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Node JS</h4>
-                  <h4>85%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress5"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Express JS</h4>
-                  <h4>70%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress6"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>MongoDB</h4>
-                  <h4>75%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress7"></div>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <!-- ABOUT SECTION END -->
-          <!-- PROJECTS SECTION -->
-        </article>
-      </section>
-      <section class="projects">
-        <section class="header">
-          <h2>.portfolio</h2>
-          <div class="circles"><div class="inner"></div></div>
-        </section>
-        <section class="projectsContainer">
-          <div class="projectInfo">
-            <a href="https://calvin-asif-project-4.github.io/calvin-barrett-asif-khan-project-4/">
-              <figure class="first"></figure>
-            </a>
-            <div class="textWrap">
-              <h3><a href="https://calvin-asif-project-4.github.io/calvin-barrett-asif-khan-project-4/">Pokemon Finder</a></h3>
-              <h4>jQuery <span>|</span> HTML5 <span>|</span> CSS3</h4>
-              <p>Pokemon is the world's highest grossing media franchise, clocking in at $95 billion. This app allows you to search for your favorite pokemon via name and allows you to see related pokemon as well. The user will be able to see the selected pokemon's general stats as well.</p>
-              <h5>Created by: Asif Khan & Calvin Barret</h5>
-            </div>
-          </div>
-          <div class="projectInfo">
-            <a href="https://calvin-asif-project-4.github.io/calvin-barrett-asif-khan-project-4/"">
-              <figure class="second"></figure>
-            </a>
-            <div class="textWrap">
-              <h3><a href="https://barrie-tenal-prachi-asif-project-6.github.io/barrie-tenal-prachi-asif-project-6/#/">Grant My Wish Zoltar</a></h3>
-              <h4>React <span>|</span> Javascript ES6 <span>|</span> HTML5/CSS3</h4>
-              <p>A fun little app that fetches data from the 'Advice Slip' - API and pays omage to Zoltar from the movie 'Big' - 1988. The app allows users to make a wish to Zoltar by inserting a coin into his machine. The coin must then be navigated through a maze by the user. Upon completion, Zoltar will grant the user their wish and provide advice to them.</p>
-              <h5>Created by: Asif Khan, Barrie Wu, Prachie Gujar & Tenal Bourchier</h5>
-            </div>
-          </div>
-          <div class="projectInfo"></div>
-        </section>
-      </section>
-      <section id="contact" class="contact"> 
-        <div class="contactHeaderAndForm">
-          <header class="header2">
-            <h2>.contact</h2>
-          </header>
-          <section class="contactForm">
-            <form action="POST">
-              <label for="name" class="sr-only">Name</label>
-              <input type="name" id="name" name="name" placeholder="Full Name">
-              <label for="email" class="sr-only">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email Address">
-              <label for="subject" class="sr-only">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Subject">
-              <label for="message" class="sr-only">Message</label>
-              <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
-              <label for="submit" class="sr-only">Submit</label>
-              <button id="submit" name="submit">Send Message</button>
-            </form>
-          </section>
+        <h2 class="h1">.about</h2>
+        <div class="bio">
+          <h3 class="h3">Keeping It Real</h3>
+          <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum explicabo illum iure, numquam culpa voluptatum magnam, neque sapiente, nam vero. Quod consequatur possimus illum dolores totam tempore nam! Saepe.Nulla, vel assumenda. Ipsum eos illo similique blanditiis pariatur magnam excepturi ullam laboriosam fugit ut praesentium quo, delectus vitae soluta velit optio beatae sint. Non dolore atque sunt sequi numquam!</p>
         </div>
-        <div class="lastDiv">
-          <div class="circles"><div class="inner"></div></div>
-          <div class="contactInfo">
-
+        <div class="buttonWrap">
+          <button class="primaryButton">Connect</button>
+          <button class="secondaryButton">Resume</button>
+        </div>
+      </section>
+      <section class="portfolio">
+        <h2 class="h1">.portfolio</h2>
+        <div class="projectContainer">
+          <div class="projects">
+            <h3 class="h3">Pokedex</h3>
+            <figure class="pokedex"></figure>
           </div>
+          <div class="projects">
+            <h3 class="h3">Zoltar Maze</h3>
+          </div>
+          <div class="projects"></div>
+          <div class="projects"></div>
         </div>
       </section>
     </main>

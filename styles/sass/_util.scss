@@ -7,7 +7,7 @@ $hotPink: #f12365;
 $blue: #2389f1;
 
 html {
-  overflow: hidden;
+  // overflow: hidden;
 }
 body {
   background-color: $lightBlack;
@@ -16,8 +16,6 @@ body {
 
 img {
   max-width: 100%;
-  // max-height: 50vh;
-  object-fit: contain;
 }
 
 button {
@@ -33,6 +31,8 @@ figure {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a, a:visited, a:active {
@@ -50,7 +50,14 @@ a:hover {
   margin: 0 auto;
 }
 
+.buttonWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // grid-column-gap: 10px;
+}
+
 .primaryButton {
+  justify-self: start;
   background-color: $aqua;
   color: $white;
   height: 50px;
@@ -62,6 +69,7 @@ a:hover {
 }
 
 .secondaryButton {
+  justify-self: end;
   background-color: $white;
   color: $aqua;
   height: 50px;

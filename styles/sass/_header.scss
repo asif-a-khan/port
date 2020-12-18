@@ -1,66 +1,215 @@
-header {
-  max-height: 100vh;
+.header1 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.aquaBackDrop {
+  height: 75%;
+  width: 100%;
+  background-color: $aqua;
   display: grid;
-  grid-template-rows: 3fr 1fr;
-  section {
-    background-color: $aqua;
-    &:nth-of-type(2) {
-      background-color: $lightBlack;
+}
+
+.asifImg {
+  justify-self: center;
+  align-self: end;
+  height: 100%;
+  width: 75%;
+  // border: solid 1px red;
+  display: grid;
+  
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.network {
+  padding: 25px;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 20px;
+    }
+    li a i {
+      font-size: 2.5em;
     }
   }
-  .proImgSection {
-    display: grid;
-    grid-template-columns: 1fr;
-    figure {
-      justify-self: center;
-      align-self: center;
-      // border: solid 1px red;
-      max-height: 600px;
-      max-width: 450px;
-      min-height: 450px;
-      min-width: 350px;
-    }
-  } .eliptical{
-    position: relative;
-    top: -100px;
-    left: -100px;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background-color: $lightBlack;
-    display: grid;
-    place-items: center;
-    .innerEliptical {
-      width: 150px;
-      height: 150px;
-      border-radius: 100%;
-      background-color: $aqua;
-    }
+  h2 {
+    margin: 10px 0;
   }
-  .network {
-    background-color: $black;
-    padding: 20px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 50px;
-    grid-row-gap: 25px;
-    ul {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      li {
-        margin: 0 25px;
-        a {
-          font-size: 24px;
-        }
-      }
-    }
-    h2 {
-      color: $aqua;
-      font-size: 40px;
-      margin: 0;
-      justify-self: center;
-    }
-  }
+}
+
+.menuArea {
+  padding: 20px;
+  position: fixed;
+}
+
+input {
+  display: none;
+}
+
+.open {
+  background-color: #3c3c3c;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+}
+
+.open:before {
+  content: "";
+  background-color: #3c3c3c;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.open:after {
+  content: "";
+  background-color: #3c3c3c;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen {
+  width: 24px;
+  height: 20px;
+  display: block;
+  // padding: 15px;
+  cursor: pointer;
+  float: left;
+}
+
+.menuOpen:hover .open:before {
+  top: -9px;
+}
+
+.menuOpen:hover .open:after {
+  top: 5px;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: $black;
+}
+
+.menu label {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.menu .menuContent {
+  position: relative;
+  top: 50%;
+  font-size: 54px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -170px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: Trebuchet MS;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.menu ul li a:hover {
+  color: $lightBlack;
+}
+
+.menu ul li:hover {
+  background: aqua;
+}
+
+.menuEffects {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menuEffects ul {
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects ul {
+  opacity: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open {
+  background-color: transparent;
+}
+
+#menuToggle:checked ~ .menuOpen .open:before {
+  content: "";
+  background-color: white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open:after {
+  content: "";
+  background-color: white;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:not(:checked) ~ .menuEffects ul {
+  transform: translateY(-30%);
 }
