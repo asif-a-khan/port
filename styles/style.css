@@ -868,19 +868,20 @@ header .network h2 {
   grid-column-gap: 25px;
 }
 
-.projects .projectsContainer .projectInfo figure {
+.projects .projectsContainer .projectInfo a figure {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
   opacity: 0.9;
 }
 
-.projects .projectsContainer .projectInfo .first {
+.projects .projectsContainer .projectInfo a .first {
   background-image: url("../../assets/pokemon.jpg");
 }
 
-.projects .projectsContainer .projectInfo .second {
+.projects .projectsContainer .projectInfo a .second {
   background-image: url("../../assets/zoltarReturns.jpg");
 }
 
@@ -892,6 +893,12 @@ header .network h2 {
 }
 
 .projects .projectsContainer .projectInfo .textWrap h3 {
+  font-size: 30px;
+  color: #19D5B2;
+  margin: 0;
+}
+
+.projects .projectsContainer .projectInfo .textWrap h3 a {
   font-size: 30px;
   color: #19D5B2;
   margin: 0;
