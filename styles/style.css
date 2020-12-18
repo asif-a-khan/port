@@ -221,7 +221,7 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -367,15 +367,16 @@ a:hover {
   background-color: #19D5B2;
   display: -ms-grid;
   display: grid;
+  place-items: end center;
 }
 
 .asifImg {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-grid-row-align: end;
-      align-self: end;
-  height: 100%;
-  width: 75%;
+  background-image: url("../../assets/asifPort.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 100%;
   display: -ms-grid;
   display: grid;
 }
@@ -610,6 +611,10 @@ main {
       grid-template-columns: 1fr;
 }
 
+.intro {
+  display: none;
+}
+
 .about {
   padding: 20px;
   max-height: 100vh;
@@ -660,10 +665,8 @@ main {
 .projectContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   grid-gap: 10px;
 }
 
@@ -680,16 +683,15 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
 }
 
 .projects figure {
   width: 100%;
   min-height: 150px;
-  border: solid 1px red;
 }
 
 .projects .pokedex {
@@ -697,4 +699,186 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
+}
+
+.projects .zoltar {
+  background-image: url("../../assets/zoltarTablet.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.contact {
+  padding: 20px;
+  max-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact h2 {
+  margin: 0;
+}
+
+.contactInfo {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.contactInfo li i {
+  color: #19D5B2;
+  font-size: 3em;
+}
+
+.contactInfo .emailIcon {
+  display: -ms-grid;
+  display: grid;
+  place-items: end;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 25px;
+}
+
+.form input {
+  padding: 5px 10px;
+  color: #19D5B2;
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: #0E0E0E;
+  border: solid 1px #19D5B2;
+}
+
+.form textarea {
+  height: 100px;
+  background-color: #0E0E0E;
+  border: solid 1px #19D5B2;
+  padding: 10px 10px;
+  color: #19D5B2;
+}
+
+.submit {
+  background-color: #19D5B2;
+  color: #FFFFFF;
+  height: 50px;
+  padding: 5px 0;
+}
+
+@media only screen and (min-width: 1250px) {
+  html {
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: hidden;
+  }
+  .root {
+    height: 100vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .header1 {
+    width: 30%;
+  }
+  main {
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    width: 70%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-rows: 100vh;
+    overflow-y: scroll;
+  }
+  main section {
+    scroll-snap-align: start;
+    height: 100vh;
+  }
+  .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro article {
+    height: 60%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 25px 50px 25px 25px;
+  }
+  .intro article .nameSection h2, .intro article .nameSection h3 {
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .intro article .nameSection h3 {
+    margin-bottom: 25px;
+  }
+  .intro article .circles {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-grid-row-align: start;
+        align-self: start;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: #19D5B2;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+  .intro article .circles .inner {
+    width: 100px;
+    height: 100px;
+    background-color: #141414;
+    border-radius: 100%;
+  }
+  .intro .imageSection {
+    height: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .intro .imageSection figure {
+    width: 50%;
+  }
+  .intro .imageSection figure:nth-of-type(1) {
+    background-image: url("../../assets/darkComp.jpg");
+  }
+  .intro .imageSection figure:nth-of-type(2) {
+    background-image: url("../../assets/gComputerSmall.jpg");
+    background-position: center;
+  }
+  .about {
+    height: 100%;
+  }
 }

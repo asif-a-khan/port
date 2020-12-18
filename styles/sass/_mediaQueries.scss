@@ -1,0 +1,91 @@
+@media only screen and (min-width: 1250px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: hidden;
+  }
+
+  .root {
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  .header1 {
+    width: 30%;
+  }
+
+  main {
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 100vh;
+    overflow-y: scroll;
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+    }
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    article {
+      // border: solid 1px red;
+      height: 60%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      padding: 25px 50px 25px 25px;
+      .nameSection {
+        h2, h3 {
+          color: $white;
+          margin: 0;
+        }
+        h3 {
+          margin-bottom: 25px;
+        }
+      }
+      .circles {
+        justify-self: end;
+        align-self: start;
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        background-color: $aqua;
+        display: grid;
+        place-items: center;
+        .inner {
+          width: 100px;
+          height: 100px;
+          background-color: $lightBlack;
+          border-radius: 100%;
+        }
+      }
+    }
+    .imageSection {
+      height: 40%;
+      display: flex;
+      figure {
+        width: 50%;
+        // border: solid 1px red;
+      }
+      figure:nth-of-type(1) {
+        background-image: url('../../assets/darkComp.jpg');
+      }
+      figure:nth-of-type(2) {
+        background-image: url('../../assets/gComputerSmall.jpg');
+        background-position: center;
+      }
+    }
+  }
+
+  .about {
+    height: 100%;
+  }
+}

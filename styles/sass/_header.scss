@@ -10,13 +10,16 @@
   width: 100%;
   background-color: $aqua;
   display: grid;
+  place-items: end center;
 }
 
 .asifImg {
-  justify-self: center;
-  align-self: end;
-  height: 100%;
-  width: 75%;
+  background-image: url('../../assets/asifPort.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 100%;
   // border: solid 1px red;
   display: grid;
   

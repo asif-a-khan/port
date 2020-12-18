@@ -4,6 +4,10 @@ main {
   grid-template-columns: 1fr;
 }
 
+.intro {
+  display: none;
+}
+
 .about {
   padding: 20px;
   max-height: 100vh;
@@ -38,8 +42,7 @@ main {
 
 .projectContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
 }
 
@@ -51,12 +54,12 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   figure {
     width: 100%;
     min-height: 150px;
-    border: solid 1px red;
+    // border: solid 1px red;
   }
   .pokedex {
     background-image: url('../../assets/pokemon.jpg');
@@ -64,5 +67,67 @@ main {
     background-repeat: no-repeat;
     border-radius: 10px;
   }
+  .zoltar {
+    background-image: url('../../assets/zoltarTablet.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+
 }
 
+.contact {
+  padding: 20px;
+  max-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  h2 {
+    margin: 0;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contactInfo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  li i {
+    color: $aqua;
+    font-size: 3em;
+  }
+  .emailIcon {
+    display: grid;
+    place-items: end;
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 25px;
+  input {
+    padding: 5px 10px;
+    color: $aqua;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: $black;
+    border: solid 1px $aqua;
+  }
+  textarea {
+    height: 100px;
+    background-color: $black;
+    border: solid 1px $aqua;
+    padding: 10px 10px;
+    color: $aqua;
+  }
+}
+
+.submit {
+  background-color: $aqua;
+  color: $white;
+  height: 50px;
+  padding: 5px 0;
+}
