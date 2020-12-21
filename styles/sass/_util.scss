@@ -7,19 +7,22 @@ $hotPink: #f12365;
 $blue: #2389f1;
 
 html {
+  // overflow: hidden;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  overflow: hidden;
 }
-body {
-  background-color: $lightBlack;
 
+body {
+  position: relative;
+  background-color: $lightBlack;
+  canvas {
+    position: absolute;
+    z-index: -2;
+  }
 }
 
 img {
   max-width: 100%;
-  // max-height: 50vh;
-  object-fit: contain;
 }
 
 button {
@@ -35,6 +38,8 @@ figure {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a, a:visited, a:active {
@@ -52,7 +57,15 @@ a:hover {
   margin: 0 auto;
 }
 
+.buttonWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // grid-column-gap: 10px;
+}
+
 .primaryButton {
+  padding: 0;
+  justify-self: start;
   background-color: $aqua;
   color: $white;
   height: 50px;
@@ -61,9 +74,17 @@ a:hover {
   p {
     margin: 0;
   }
+  transition: all 0.25s ease-in;
+  &:hover {
+    padding: 10px;
+    color: $aqua;
+    background-color: white;
+  }
 }
 
 .secondaryButton {
+  padding: 0;
+  justify-self: end;
   background-color: $white;
   color: $aqua;
   height: 50px;
@@ -71,6 +92,12 @@ a:hover {
   border-radius: 20px;
   p {
     margin: 0;
+  }
+  transition: all 0.25s ease-in;
+  &:hover {
+    padding: 10px;
+    color: $white;
+    background-color: $aqua;
   }
 }
 // Util End

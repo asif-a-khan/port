@@ -5,22 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asif Khan</title>
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
-  <div class="mainWrap">
+  <canvas id="canvas"></canvas>
+  <div class="root">
     <header class="header1">
-      <section class="proImgSection">
-        <div class="eliptical">
-          <div class="innerEliptical">
+      <nav id="menuArea" class="menuArea">
+        <input type="checkbox" id="menuToggle"></input>
+      
+        <label for="menuToggle" class="menuOpen">
+          <div class="open"></div>
+        </label>
+
+        <div class="menu menuEffects">
+          <label for="menuToggle"></label>
+          <div class="menuContent">
+            <ul>
+              <li><a href="https://codedkhan.com/">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#">PROJECTS</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
           </div>
         </div>
-        <figure>
-          <img src="./assets/asifPort.jpg" alt="">
+      </nav>
+      <section class="aquaBackDrop">
+        <figure class="asifImg">
+          <!-- <img src="./assets/asifPort.jpg" alt=""> -->
         </figure>
       </section>
       <section class="network">
-        <h2>Connect With Me</h2>
         <ul>
           <li>
             <a href="https://www.instagram.com/codedkhan/">
@@ -43,64 +60,51 @@
             </a>
         </li>
         </ul>
+        <h2 class="h2">Connect With Me</h2>
       </section>
     </header>
     <main>
-      <!-- INTRO SECTION -->
       <section class="intro">
-        <article class="wrapper">
-          <div class="nameTitle">
-            <div class="textWrap">
-              <h2>Hi There, I'm</h2>
-              <h1>Asif Khan</h1>
-              <h3>Front End Developer</h3>
-              <div class="buttonWrap">
-                <a href="#contact">
-                  <button class="primaryButton">
-                    <p>HIRE ME</p>
-                  </button>
-                </a>
-                <button class="secondaryButton">
-                  <p>DOWNLOAD CV</p>
-                </button>
-              </div>
+        <article>
+          <div class="nameSection">
+            <h2 class="h2">Hi There, I'm</h2>
+            <h1 class="h1">ASIF KHAN</h1>
+            <h3 class="h3">Front-End Developer</h3>
+            <div class="buttonWrap">
+              <button class="primaryButton">Connect</button>
+              <button class="secondaryButton">Resume</button>
             </div>
           </div>
           <div class="circles">
-            <div class="outer">
-              <div class="inner"></div>
-            </div>
+            <div class="inner"></div>
           </div>
+          
         </article>
-        <div class="figureContainer">
-          <figure>
-          </figure>
-          <figure>
-          </figure>
+        <div class="imageSection">
+          <figure class="darkComp"></figure>
+          <figure></figure>
         </div>
       </section>
-      <!-- INTRO END -->
-      <!-- ABOUT SECTION -->
-      <section class="about">
-        <article class="bioEduAndExp">
-          <section class="bio">
-            <h2>.about</h2>
-            <p>I'm a 22 year old movie enthusiast, video game fanatic and aspiring masterchef contestant! When it comes to my work, I strive to provide the best user experience possible. Interested in working with me? Leave a message by clicking below!</p>
-            <div class="buttonWrap">
-              <a href="#contact">
-                <button class="primaryButton">
-                  HIRE ME
-                </button>
-              </a>
-              <button class="secondaryButton">
-                DOWNLOAD CV
-              </button>
-            </div>
-          </section>
-          <section class="edu">
-            <h2>.education</h2>
-            <div class="schoolInfoWrap">
+      <section id="about" class="about">
+        <h2 class="h1">.about</h2>
+        <div class="bio">
+          <h2 class="h2">Keeping It Real</h3>
+          <p class="p">I'm a 22 year old movie enthusiast, video game fanatic and aspiring masterchef contestant! When it comes to my work, I strive to provide the best user experience possible. Interested in working with me? Leave a message by clicking below!</p>
+        </div>
+        <div class="bio edu">
+          <div class="gridItems">
+            <h2 class="h2">.education</h3>
+            <div class="schools">
               <div class="schoolInfo">
+<<<<<<< HEAD
+                <h3 class="h3">Web Development Bootcamp</h3>
+                <div class="circleAndSchool">
+                  <h4 class="h4">Juno College</h4>
+                  <div class="circles">
+                    <div class="inner"></div>
+                  </div>
+                  <h4 class="h4">2020</h4>
+=======
                 <h3>Web Development Bootcamp</h3>
                 <div class="yearCircleName">
                   <h4>2020</h4>
@@ -108,19 +112,59 @@
                     <div class="inner"></div>
                   </div>
                   <h4>Juno College</h4>
+>>>>>>> a156f3c63eaf11074f59ea940f81e21b8fc49dfb
                 </div>
+                <p class="p">During this 12 week program focused on front end development. I learned various client side technologies, coding fundamentals and industry best practices. Signifant focus on creating apps with a 1-week deadline.</p>
               </div>
               <div class="schoolInfo">
-                <h3>Secondary School Diploma</h3>
-                <div class="yearCircleName">
-                  <h4>2016</h4>
+                <h3 class="h3">Secondary/High School</h3>
+                <div class="circleAndSchool">
+                  <h4 class="h4">Castlebrooke</h4>
                   <div class="circles">
                     <div class="inner"></div>
                   </div>
-                  <h4>Castlebrooke</h4>
+                  <h4 class="h4">2016</h4>
                 </div>
+                <p class="p">During my time in highschool I specialized in robotics, physics and chemistry.</p>
               </div>
             </div>
+<<<<<<< HEAD
+          </div>
+          <div class="gridItems">
+            <h2 class="h2">.skills</h3>
+            <div class="skillIconsContainer">
+              <div class="skillNameAndIcon">
+                <h4 class="h4">HTML5</h4>
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="skillNameAndIcon">
+                <h4 class="h4">CSS3</h4>
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <div class="skillNameAndIcon">
+                <h4 class="h4">JS ES6</h4>
+                <i class="fab fa-js-square"></i>
+              </div>
+              <div class="skillNameAndIcon">
+                <h4 class="h4">React/Redux</h4>
+                <i class="fab fa-react"></i>
+              </div>
+              <div class="skillNameAndIcon">
+                <h4 class="h4">MongoDB</h4>
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="skillNameAndIcon">
+                <h4 class="h4">Node/Express</h4>
+                <i class="fab fa-node"></i>
+              </div>
+              <div class="skillNameAndIcon">
+                <h4 class="h4">PHP</h4>
+                <i class="fab fa-php"></i>
+              </div>
+              <div class="skillNameAndIcon">
+                <h4 class="h4">Git/Github</h4>
+                <i class="fab fa-git-square"></i>
+=======
           </section>
           <section class="exp">
             <h2>.experience</h2>
@@ -132,150 +176,71 @@
                   <h3>2019</h3>
                 </div>
                 <p>I was given the oppurtunity to be the coolest campus security guard ever. Patrolling the school to provide the safest experience for staff and students</p>
+>>>>>>> a156f3c63eaf11074f59ea940f81e21b8fc49dfb
               </div>
-              <!-- <div class="jobs">
-
-              </div> -->
             </div>
-          </section>
-        </article>
-        <article class="skills">
-          <section class="circleWrap">
-            <div class="circles">
-              <div class="inner"></div>
-            </div>
-          </section>
-          <section class="techSkills">
-            <h2>.skills</h2>
-            <ul class="techSkillList">
-              <li>
-                <div class="skillAndProgress">
-                  <h4>HTML/CSS</h4>
-                  <h4>85%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress1"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Javascript ES6+ & Jquery</h4>
-                  <h4>90%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress2"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>React/React-Redux</h4>
-                  <h4>80%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress3"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Firebase</h4>
-                  <h4>70%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress4"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Node JS</h4>
-                  <h4>85%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress5"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>Express JS</h4>
-                  <h4>70%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress6"></div>
-                </div>
-              </li>
-              <li>
-                <div class="skillAndProgress">
-                  <h4>MongoDB</h4>
-                  <h4>75%</h4>
-                </div>
-                <div class="progressBar">
-                  <div class="progress7"></div>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <!-- ABOUT SECTION END -->
-          <!-- PROJECTS SECTION -->
-        </article>
-      </section>
-      <section class="projects">
-        <section class="header">
-          <h2>.portfolio</h2>
-          <div class="circles"><div class="inner"></div></div>
-        </section>
-        <section class="projectsContainer">
-          <div class="projectInfo">
-            <a href="https://calvin-asif-project-4.github.io/calvin-barrett-asif-khan-project-4/">
-              <figure class="first"></figure>
-            </a>
-            <div class="textWrap">
-              <h3><a href="https://calvin-asif-project-4.github.io/calvin-barrett-asif-khan-project-4/">Pokemon Finder</a></h3>
-              <h4>jQuery <span>|</span> HTML5 <span>|</span> CSS3</h4>
-              <p>Pokemon is the world's highest grossing media franchise, clocking in at $95 billion. This app allows you to search for your favorite pokemon via name and allows you to see related pokemon as well. The user will be able to see the selected pokemon's general stats as well.</p>
-              <h5>Created by: Asif Khan & Calvin Barret</h5>
-            </div>
-          </div>
-          <div class="projectInfo">
-            <a href="https://calvin-asif-project-4.github.io/calvin-barrett-asif-khan-project-4/"">
-              <figure class="second"></figure>
-            </a>
-            <div class="textWrap">
-              <h3><a href="https://barrie-tenal-prachi-asif-project-6.github.io/barrie-tenal-prachi-asif-project-6/#/">Grant My Wish Zoltar</a></h3>
-              <h4>React <span>|</span> Javascript ES6 <span>|</span> HTML5/CSS3</h4>
-              <p>A fun little app that fetches data from the 'Advice Slip' - API and pays omage to Zoltar from the movie 'Big' - 1988. The app allows users to make a wish to Zoltar by inserting a coin into his machine. The coin must then be navigated through a maze by the user. Upon completion, Zoltar will grant the user their wish and provide advice to them.</p>
-              <h5>Created by: Asif Khan, Barrie Wu, Prachie Gujar & Tenal Bourchier</h5>
-            </div>
-          </div>
-          <div class="projectInfo"></div>
-        </section>
-      </section>
-      <section id="contact" class="contact"> 
-        <div class="contactHeaderAndForm">
-          <header class="header2">
-            <h2>.contact</h2>
-          </header>
-          <section class="contactForm">
-            <form action="POST">
-              <label for="name" class="sr-only">Name</label>
-              <input type="name" id="name" name="name" placeholder="Full Name">
-              <label for="email" class="sr-only">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email Address">
-              <label for="subject" class="sr-only">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Subject">
-              <label for="message" class="sr-only">Message</label>
-              <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
-              <label for="submit" class="sr-only">Submit</label>
-              <button id="submit" name="submit">Send Message</button>
-            </form>
-          </section>
-        </div>
-        <div class="lastDiv">
-          <div class="circles"><div class="inner"></div></div>
-          <div class="contactInfo">
-
           </div>
         </div>
+        <div class="buttonWrap">
+          <button class="primaryButton">Connect</button>
+          <button class="secondaryButton">Resume</button>
+        </div>
+      </section>
+      <section class="portfolio">
+        <h2 class="h1">.projects</h2>
+        <div class="projectContainer">
+          <div class="projects">
+            <div class="projectInfo">
+              <a href="">
+                <h3 class="h3">Pokedex</h3>
+              </a>
+              <h4 class="h4">Jquery | HTML5 | CSS3 | SASS</h4>
+              <p class="p dOnly">If, you're a fan of pokemon, come use this pokedex app and find your favorite pokemon.</p>
+            </div>
+            <a href="">
+              <figure class="pokedex"></figure>
+            </a>
+          </div>
+          <div class="projects">
+            <div class="projectInfo">
+              <a href="">
+                <h3 class="h3">Zoltar's Maze</h3>
+              </a>
+              <h4 class="h4">React | Javascript ES6 | SASS | HTML5/CSS3</h4>
+              <p class="p dOnly">Welcome to Zoltar's Maze. Much like in the movie, 'Big', complete the maze to be granted a wish.</p>
+            </div>
+            <a href="">
+              <figure class="zoltar"></figure>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <h2 class="h1">.contact</h2>
+        <ul class="contactInfo">
+          <li>
+            <i class="fas fa-phone-square-alt"></i>
+            <h4 class="h4">647-819-7059</h3>
+          </li>
+          <li class="emailIcon">
+            <i class="fas fa-envelope-square "></i>
+            <h4 class="h4">thecodedkhan@gmail.com</h3>
+          </li>
+        </ul>
+        <form class="form" action="">
+          <label for="name" class="srOnly">Name</label>
+          <input type="name" id="name" name="name" placeholder="Full Name">
+          <label for="email" class="srOnly">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Email Address">
+          <label for="subject" class="srOnly"></label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+          <label for="message" class="srOnly">Message</label>
+          <textarea name="message" id="message" placeholder="Message here..."></textarea>
+          <button id="submit" class="submit">Send Message</button>
+        </form>
       </section>
     </main>
   </div>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

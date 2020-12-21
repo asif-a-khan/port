@@ -1,161 +1,212 @@
-@media only screen and (max-width: 1300px) {
-  .mainWrap {
-    overflow-y: scroll;
+@media only screen and (min-width: 1250px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow: hidden;
+  }
+  
+  .root {
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  .header1 {
+    width: 30%;
+  }
+
+  main {
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 100vh;
+    overflow-y: scroll;
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+    }
+  }
+
+  .intro {
     display: flex;
     flex-direction: column;
-    .header1 {
-      order: 2;
-      .proImgSection {
+    article {
+      // border: solid 1px red;
+      height: 60%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      padding: 25px 50px 25px 25px;
+      .nameSection {
         overflow: hidden;
-      }
-      .network {
-        place-items: center;
-        grid-auto-rows: auto;
-        h2 {
-          align-self: center;
-          justify-self: center;
+        h1 {
+          overflow: hidden; /* Ensures the content is not revealed until the animation */
+          border-right: .1em solid $aqua; /* The typwriter cursor */
+          white-space: nowrap; /* Keeps the content on a single line */
+          // margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+          // letter-spacing: .15em; /* Adjust as needed */
+          animation: 
+            typing 2s steps(40, end),
+            blink-caret .75s step-end infinite;
         }
-        ul {
-          justify-self: center;
-          align-self: center;
+        h2, h3 {
+          color: $white;
+          margin: 0;
+        }
+        h3 {
+          margin-bottom: 25px;
+        }
+      }
+      .circles {
+        justify-self: end;
+        align-self: start;
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        background-color: $aqua;
+        display: grid;
+        place-items: center;
+        .inner {
+          width: 100px;
+          height: 100px;
+          background-color: $lightBlack;
+          border-radius: 100%;
         }
       }
     }
-    main {
-      order: 1;
-      overflow: visible;
-      .intro {
-        min-height: 100vh;
-        max-height: 100vh;
-        grid-template-rows: 1fr 1fr;
+    .imageSection {
+      height: 40%;
+      display: flex;
+      figure {
+        width: 50%;
+        // border: solid 1px red;
       }
-      .about {
-        min-height: 100vh;
-        max-height: 100vh;
+      figure:nth-of-type(1) {
+        background-image: url('../../assets/darkComp.jpg');
       }
-      .contact {
-        min-height: 100vh;
-        max-height: 100vh;
-        overflow: hidden;
+      figure:nth-of-type(2) {
+        background-image: url('../../assets/gComputerSmall.jpg');
+        background-position: center;
       }
     }
   }
-}
 
-@media only screen and (max-width: 800px) {
-  main {
-    .about {
-      grid-template-columns: 1fr;
-      .skills {
-        display: none;
-      }
-    }
-    .projects {
-      .projectsContainer {
-        .projectInfo {
+  .about {
+    height: 100%;
+    .edu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .gridItems {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          margin-bottom: 25px;
+        }
+        &:nth-of-type(1) {
+          border-right: solid 1px $aqua;
+        }
+        &:nth-of-type(2) {
+          h2 {
+            margin: 0;
+          }
+          padding-left: 10px;
+          display: grid;
           grid-template-columns: 1fr;
-          figure {
-            height: 150px;
-            width: 150px;
+        }
+        .schools {
+          display: flex;
+          flex-direction: column;
+          .schoolInfo {
+            display: flex;
+            flex-direction: column;
+            .circleAndSchool {
+              width: 50%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .circles {
+                height: 20px;
+                width: 20px;
+                border-radius: 100%;
+                background-color: $aqua;
+                display: grid;
+                place-items: center;
+                .inner {
+                  height: 10px;
+                  width: 10px;
+                  border-radius: 100%;
+                  background-color: $black;
+                }
+              }
+            }
+            p {
+              width: 90%;
+              margin-top: 0;
+            }
+          }
+        }
+        .skillIconsContainer {
+          margin-bottom: 50px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-row-gap: 100px;
+          place-items: center;
+          .skillNameAndIcon {
+            text-align: center;
+            i {
+              font-size: 3em;
+              color: $aqua;
+              transition: all 0.25s ease-in;
+              &:hover {
+                color: $white;
+                font-size: 3.5em;
+              }
+            }
           }
         }
       }
     }
   }
-}
 
-@media only screen and (max-width: 700px) {
-  .mainWrap .header1 {
-    // min-height: 100px;
-    max-height: 900px;
-    .network h2{
-      display: none;
-    }
-
-    .network ul {
-      padding-top: 25px;
-      align-self: start;
-      grid-row: 1/2;
-    }
-  }
-  .intro {
-    padding: 0;
-    grid-template-columns: 1fr;
-  }
-
-  .intro article {
-    grid-row:  1/3;
-  }
-
-  .intro article .nameTitle .textWrap .buttonWrap {
-    grid-column-gap: 25px;
-  }
-
-  .intro article .circles {
-    display: none;
-  }
-  .intro .figureContainer {
-    display: none;
-  }
-
-  .about .bioEduAndExp {
-    padding: 0;
-    .edu, .exp {
-      display: none;
-    }
-
-    .bio {
-      
-      grid-row: 1/4;
-      display: grid;
-      grid-template-columns: 1fr;
-      h2 {
-        margin: 0;
+  .portfolio {
+    justify-content: space-between;
+    .projectContainer {
+      .projects {
+        text-align: left;
+        align-items: center;
+        flex-direction: row;
+        .projectInfo {
+          padding: 10px 0;
+          width: 50%;
+          .dOnly {
+            display: block;
+          }
+        }
+        a {
+          figure {
+            background-position: right;
+            border: none;
+            width: 100%;
+          }
+        } 
       }
-      p {
-        line-height: 3;
-      }
-      .buttonWrap {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 15px;
-      }
-    }
-  }
-
-  .projects .header .circles {
-    display: none;
-  }
-
-  .projects .projectsContainer {
-    .projectInfo:nth-of-type(3) {
-      display: none;
-    }
-  }
-
-  .projects .projectsContainer .projectInfo p {
-    display: none;
-  }
-
-  .first, .second {
-    display: none;
-  }
-
-  .header2 h2 {
-    margin: 0;
-    align-self: center;
-  }
-
-  .contact {
-    grid-template-columns: 1fr;
-    .lastDiv {
-      display: none;
-    }
-    .contactForm {
-      display: grid;
-      grid-template-columns: 1fr;
     }
   }
 }
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $aqua; }
+}
