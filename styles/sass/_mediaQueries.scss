@@ -43,6 +43,17 @@
       place-items: center;
       padding: 25px 50px 25px 25px;
       .nameSection {
+        overflow: hidden;
+        h1 {
+          overflow: hidden; /* Ensures the content is not revealed until the animation */
+          border-right: .1em solid $aqua; /* The typwriter cursor */
+          white-space: nowrap; /* Keeps the content on a single line */
+          // margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+          // letter-spacing: .15em; /* Adjust as needed */
+          animation: 
+            typing 2s steps(40, end),
+            blink-caret .75s step-end infinite;
+        }
         h2, h3 {
           color: $white;
           margin: 0;
@@ -87,5 +98,115 @@
 
   .about {
     height: 100%;
+    .edu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .gridItems {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          margin-bottom: 25px;
+        }
+        &:nth-of-type(1) {
+          border-right: solid 1px $aqua;
+        }
+        &:nth-of-type(2) {
+          h2 {
+            margin: 0;
+          }
+          padding-left: 10px;
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        .schools {
+          display: flex;
+          flex-direction: column;
+          .schoolInfo {
+            display: flex;
+            flex-direction: column;
+            .circleAndSchool {
+              width: 50%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .circles {
+                height: 20px;
+                width: 20px;
+                border-radius: 100%;
+                background-color: $aqua;
+                display: grid;
+                place-items: center;
+                .inner {
+                  height: 10px;
+                  width: 10px;
+                  border-radius: 100%;
+                  background-color: $black;
+                }
+              }
+            }
+            p {
+              width: 90%;
+              margin-top: 0;
+            }
+          }
+        }
+        .skillIconsContainer {
+          margin-bottom: 50px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-row-gap: 100px;
+          place-items: center;
+          .skillNameAndIcon {
+            text-align: center;
+            i {
+              font-size: 3em;
+              color: $aqua;
+              transition: all 0.25s ease-in;
+              &:hover {
+                color: $white;
+                font-size: 3.5em;
+              }
+            }
+          }
+        }
+      }
+    }
   }
+
+  .portfolio {
+    justify-content: space-between;
+    .projectContainer {
+      .projects {
+        text-align: left;
+        align-items: center;
+        flex-direction: row;
+        .projectInfo {
+          padding: 10px 0;
+          width: 50%;
+          .dOnly {
+            display: block;
+          }
+        }
+        a {
+          figure {
+            background-position: right;
+            border: none;
+            width: 100%;
+          }
+        } 
+      }
+    }
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $aqua; }
 }

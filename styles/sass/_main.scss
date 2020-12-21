@@ -1,13 +1,8 @@
 main {
-  scroll-snap-align: start;
-  scroll-snap-type: y mandatory;
   -ms-overflow-style: none;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  section {
-    scroll-snap-align: start;
-  }
 }
 
 .intro {
@@ -32,6 +27,12 @@ main {
   padding: 10px;
   border-radius: 10px;
 }
+
+.edu {
+  display: none;
+}
+
+.dOnly {display: none;}
 
 .portfolio {
   padding: 20px;
@@ -62,6 +63,9 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+  a {
+    width: 100%;
+  }
   figure {
     width: 100%;
     min-height: 150px;
@@ -83,7 +87,6 @@ main {
 }
 
 .contact {
-  scroll-snap-align: start;
   padding: 20px;
   max-height: 100vh;
   height: 100vh;

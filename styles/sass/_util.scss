@@ -11,9 +11,14 @@ html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
-body {
-  background-color: $lightBlack;
 
+body {
+  position: relative;
+  background-color: $lightBlack;
+  canvas {
+    position: absolute;
+    z-index: -2;
+  }
 }
 
 img {
@@ -59,6 +64,7 @@ a:hover {
 }
 
 .primaryButton {
+  padding: 0;
   justify-self: start;
   background-color: $aqua;
   color: $white;
@@ -68,9 +74,16 @@ a:hover {
   p {
     margin: 0;
   }
+  transition: all 0.25s ease-in;
+  &:hover {
+    padding: 10px;
+    color: $aqua;
+    background-color: white;
+  }
 }
 
 .secondaryButton {
+  padding: 0;
   justify-self: end;
   background-color: $white;
   color: $aqua;
@@ -79,6 +92,12 @@ a:hover {
   border-radius: 20px;
   p {
     margin: 0;
+  }
+  transition: all 0.25s ease-in;
+  &:hover {
+    padding: 10px;
+    color: $white;
+    background-color: $aqua;
   }
 }
 // Util End
