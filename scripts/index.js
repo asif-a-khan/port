@@ -12,8 +12,19 @@ const app = {
 		})
 	},
 
+	handleConnectClick() {
+		const connect = document.querySelectorAll('.primaryButton')
+		const contact = document.getElementById('contact')
+		connect.forEach(item => {
+			item.addEventListener('click', e => {
+				contact.scrollIntoView()
+			})
+		})
+	},
+
 	init() {
 		this.handleNavClick()
+		this.handleConnectClick()
 	}
 }
 
