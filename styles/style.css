@@ -760,6 +760,13 @@ main {
   border-radius: 10px;
 }
 
+.projects .gilmore {
+  background-image: url("../../assets/projectgg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
 .contact {
   padding: 20px;
   max-height: 100vh;
