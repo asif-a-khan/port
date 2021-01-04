@@ -675,6 +675,11 @@ main {
   margin: 0;
 }
 
+.about .buttonWrap a {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 .bio {
   background-color: #0E0E0E;
   padding: 10px;

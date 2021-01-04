@@ -17,7 +17,7 @@ const app = {
 		const contact = document.getElementById('contact')
 		connect.forEach(item => {
 			item.addEventListener('click', e => {
-				contact.scrollIntoView()
+				contact.scrollIntoView({behavior: "smooth"})
 			})
 		})
 	},

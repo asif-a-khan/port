@@ -20,6 +20,9 @@ main {
   h2 {
     margin: 0;
   }
+  .buttonWrap a {
+    justify-self: end;
+  }
 }
 
 .bio {
