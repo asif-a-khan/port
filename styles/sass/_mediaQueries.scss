@@ -174,30 +174,56 @@
   }
 
   .portfolio {
-    justify-content: space-between;
-    .projectContainer {
-      .projects {
-        text-align: left;
-        align-items: center;
-        flex-direction: row;
-        .projectInfo {
-          padding: 10px 0;
-          width: 50%;
-          .dOnly {
-            display: block;
-          }
-        }
-        a {
-          figure {
-            background-position: right;
-            border: none;
-            width: 100%;
-          }
-        } 
-      }
+    padding: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    h2 {
+      margin: 0;
+      margin-bottom: 25px;
     }
   }
-}
+  
+  .projectContainer {
+    scroll-snap-type: x mandatory;
+      overflow-y: scroll;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    // grid-template-columns: 1fr 1fr;
+    flex-wrap: nowrap;
+    background-color: $black;
+    width: 100%;
+    padding: 10px;
+    .project {
+      h2.h2, p.p, h3.h3, h4.h4 {
+        margin-bottom: 25px;
+      }
+      padding: 25px;
+      margin: 0 10px;
+      width: 100%;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+  }
+  
+  .projectNavContainer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 25px;
+  }
+  
+  .leftArrow, .rightArrow {
+    background-color: $lightBlack;
+    height: 200px;
+    width: 10%;
+    // border: solid 1px red;
+    i {
+      font-size: 4em;
+      color: $aqua;
+    }
+  }
 
 /* The typing effect */
 @keyframes typing {
@@ -209,4 +235,4 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: $aqua; }
-}
+}}
