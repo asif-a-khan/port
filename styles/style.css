@@ -657,7 +657,7 @@ main {
 
 .about {
   padding: 20px;
-  max-height: 100vh;
+  max-height: 200vh;
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -690,81 +690,68 @@ main {
 }
 
 .portfolio {
-  padding: 20px;
-  max-height: 100vh;
-  height: 100vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.portfolio h2 {
-  margin: 0;
-}
-
-.projectContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: 10px;
 }
 
-.projects {
-  padding: 10px;
-  background-color: #0E0E0E;
-  border-radius: 10px;
-  height: 250px;
-  width: 100%;
+.portfolio h2 {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.projectContainer {
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  text-align: center;
-}
-
-.projects a {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #0E0E0E;
   width: 100%;
+  padding: 10px;
 }
 
-.projects figure {
+.projectContainer .project {
+  padding: 25px;
+  margin: 0 10px;
   width: 100%;
-  min-height: 150px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
-.projects .pokedex {
-  background-image: url("../../assets/pokemon.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
+.projectContainer .project h2.h2, .projectContainer .project p.p, .projectContainer .project h3.h3, .projectContainer .project h4.h4 {
+  margin-bottom: 25px;
 }
 
-.projects .zoltar {
-  background-image: url("../../assets/zoltarTablet.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
+.projectNavContainer {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-column-gap: 25px;
 }
 
-.projects .gilmore {
-  background-image: url("../../assets/projectgg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
+.leftArrow, .rightArrow {
+  background-color: #141414;
+  height: 200px;
+  width: 20%;
+}
+
+.leftArrow i, .rightArrow i {
+  font-size: 4em;
+  color: #19D5B2;
 }
 
 .contact {
@@ -1056,66 +1043,95 @@ main {
     font-size: 3.5em;
   }
   .portfolio {
+    padding: 25px;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .portfolio h2 {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  .projectContainer {
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    overflow-y: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    background-color: #0E0E0E;
+    width: 100%;
+    padding: 10px;
+  }
+  .projectContainer .project {
+    padding: 25px;
+    margin: 0 10px;
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .projectContainer .project h2.h2, .projectContainer .project p.p, .projectContainer .project h3.h3, .projectContainer .project h4.h4 {
+    margin-bottom: 25px;
+  }
+  .projectNavContainer {
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    grid-column-gap: 25px;
   }
-  .portfolio .projectContainer .projects {
-    text-align: left;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .leftArrow, .rightArrow {
+    background-color: #141414;
+    height: 200px;
+    width: 10%;
   }
-  .portfolio .projectContainer .projects .projectInfo {
-    padding: 10px 0;
-    width: 50%;
+  .leftArrow i, .rightArrow i {
+    font-size: 4em;
+    color: #19D5B2;
   }
-  .portfolio .projectContainer .projects .projectInfo .dOnly {
-    display: block;
+  /* The typing effect */
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-  .portfolio .projectContainer .projects a figure {
-    background-position: right;
-    border: none;
-    width: 100%;
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
-}
-
-/* The typing effect */
-@-webkit-keyframes typing {
-  from {
-    width: 0;
+  /* The typewriter cursor effect */
+  @-webkit-keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #19D5B2;
+    }
   }
-  to {
-    width: 100%;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #19D5B2;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #19D5B2;
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #19D5B2;
+    }
   }
 }
