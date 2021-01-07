@@ -23,6 +23,9 @@ main {
   .buttonWrap a {
     justify-self: end;
   }
+  .buttonWrap a:nth-of-type(1) {
+    justify-self: start;
+  }
 }
 
 .bio {
