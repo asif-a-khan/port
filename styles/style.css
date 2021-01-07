@@ -412,7 +412,7 @@ button, input, textarea {
 .asifImg {
   background-image: url("../../assets/asifPort.jpg");
   background-size: contain;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   height: 90%;
   width: 100%;
@@ -1087,7 +1087,7 @@ main {
     margin-bottom: 25px;
   }
   .projectNavContainer {
-    margin-top: 100px;
+    margin-top: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1138,5 +1138,98 @@ main {
     50% {
       border-color: #19D5B2;
     }
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .intro article .circles {
+    margin-top: 25px;
+    -ms-grid-column-align: end;
+    justify-self: end;
+    -ms-grid-row-align: start;
+    align-self: start;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: #19D5B2;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+  .intro article {
+    height: 60%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 0 50px 25px 25px;
+  }
+  .about .h1 {
+    font-size: 60px;
+    color: #19D5B2;
+    font-family: 'Rubik', sans-serif;
+  }
+  .about .h2 {
+    font-size: 30px;
+    color: #19D5B2;
+    font-family: 'Rubik', sans-serif;
+  }
+  .about .h3 {
+    font-size: 18px;
+    color: #19D5B2;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+  }
+  .about .h4 {
+    font-size: 16px;
+    color: #19D5B2;
+    font-family: 'Karla', sans-serif;
+  }
+  .about .p {
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 1.7;
+    font-family: 'Karla', sans-serif;
+  }
+  .projectContainer {
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    background-color: #0E0E0E;
+    width: 100%;
+    padding: 10px;
+  }
+  .projectContainer .project {
+    padding: 25px;
+    margin: 0 10px;
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .projectContainer .project h2.h2, .projectContainer .project p.p, .projectContainer .project h3.h3, .projectContainer .project h4.h4 {
+    margin-bottom: 25px;
+  }
+  .projectNavContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    grid-column-gap: 25px;
+  }
+  .leftArrow, .rightArrow {
+    background-color: #141414;
+    height: 100px;
+    width: 10%;
   }
 }

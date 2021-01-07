@@ -208,7 +208,7 @@
   }
   
   .projectNavContainer {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     grid-column-gap: 25px;
@@ -236,3 +236,105 @@
   from, to { border-color: transparent }
   50% { border-color: $aqua; }
 }}
+
+@media only screen and (max-height: 800px) {
+  .intro article .circles {
+    margin-top: 25px;
+    -ms-grid-column-align: end;
+    justify-self: end;
+    -ms-grid-row-align: start;
+    align-self: start;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: #19D5B2;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+}
+
+  .intro article {
+    height: 60%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 0 50px 25px 25px;
+  }
+  .about {
+    .h1 {
+      font-size: 60px;
+      color: #19D5B2;
+      font-family: 'Rubik', sans-serif;
+    }
+  
+    .h2 {
+      font-size: 30px;
+      color: #19D5B2;
+      font-family: 'Rubik', sans-serif;
+    }
+  
+    .h3 {
+      font-size: 18px;
+      color: #19D5B2;
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+  }
+  
+  .h4 {
+    font-size: 16px;
+    color: #19D5B2;
+    font-family: 'Karla', sans-serif;
+  }
+  
+    .p {
+      font-size: 14px;
+      color: #FFFFFF;
+      line-height: 1.7;
+      font-family: 'Karla', sans-serif;
+    }
+  }
+
+  .projectContainer {
+    scroll-snap-type: x mandatory;
+    // overflow-y: scroll;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    // grid-template-columns: 1fr 1fr;
+    flex-wrap: nowrap;
+    background-color: $black;
+    width: 100%;
+    padding: 10px;
+    .project {
+      h2.h2, p.p, h3.h3, h4.h4 {
+        margin-bottom: 25px;
+      }
+      padding: 25px;
+      margin: 0 10px;
+      width: 100%;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+  }
+
+
+  .projectNavContainer {
+    // margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    grid-column-gap: 25px;
+}
+
+
+  .leftArrow, .rightArrow {
+    background-color: #141414;
+    height: 100px;
+    width: 10%;
+}
+}
