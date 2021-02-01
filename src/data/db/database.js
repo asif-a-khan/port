@@ -22,7 +22,7 @@ const database = {
     },
     brandImage: '/images/300.jpg',
     aboutImage: '/images/750.jpg',
-    aboutImageLg: '/images/about-image-lg.jpg',
+    aboutImageLg: '/images/750.jpg',
     cvfile: '/files/asifKhanResume.pdf'
   },
   services: [
