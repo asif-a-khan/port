@@ -23,7 +23,7 @@ const database = {
     brandImage: '/images/300.jpg',
     aboutImage: '/images/750.jpg',
     aboutImageLg: '/images/about-image-lg.jpg',
-    cvfile: '/files/empty.pdf'
+    cvfile: '/files/asifKhanResume.pdf'
   },
   services: [
     {
@@ -161,6 +161,7 @@ const database = {
       subtitle: "[ ES6+ Javascript | React Native | Firebase ]",
       imageUrl: "/images/4signal.jpg",
       largeImageUrl: ["/images/portfolio-image-5-lg.jpg"],
+      url: 'https://twitter.com/CodedKhan/status/1356054712068550656?s=20',
       github: 'https://github.com/asif-a-khan/codedSignal'
     },
     // {
