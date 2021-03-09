@@ -167,7 +167,7 @@ const database = {
     {
       id: 6,
       title: "Coded Slack",
-      subtitle: "[ ES6+ Javascript | Styled Components | Firebase ]",
+      subtitle: "[ ES6+ Javascript | React | Styled Components | Firebase ]",
       imageUrl: "/images/slack.jpg",
       largeImageUrl: ["/images/portfolio-image-6-lg.jpg"],
       url: 'https://codedslack.netlify.app/',
