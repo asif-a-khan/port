@@ -164,13 +164,15 @@ const database = {
       url: 'https://twitter.com/CodedKhan/status/1356054712068550656?s=20',
       github: 'https://github.com/asif-a-khan/codedSignal'
     },
-    // {
-    //   id: 6,
-    //   title: "Pendrive",
-    //   subtitle: "Free pendrive mockup design.",
-    //   imageUrl: "/images/portfolio-image-6.jpg",
-    //   largeImageUrl: ["/images/portfolio-image-6-lg.jpg"]
-    // },
+    {
+      id: 6,
+      title: "Pendrive",
+      subtitle: "Free pendrive mockup design.",
+      imageUrl: "/images/slack.png",
+      largeImageUrl: ["/images/portfolio-image-6-lg.jpg"],
+      url: 'https://codedslack.netlify.app/',
+      github: 'https://github.com/asif-a-khan/codedSlack'
+    },
     // {
     //   id: 7,
     //   title: "Beautiful Pendrive",
