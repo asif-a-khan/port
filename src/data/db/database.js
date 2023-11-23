@@ -23,7 +23,7 @@ const database = {
     brandImage: '/images/300.jpg',
     aboutImage: '/images/750.jpg',
     aboutImageLg: '/images/750.jpg',
-    cvfile: '/files/asifKhanResume.pdf'
+    cvfile: '/files/Asif_Khan_Resume_.pdf'
   },
   services: [
     {
