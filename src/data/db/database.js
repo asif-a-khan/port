@@ -4,11 +4,11 @@ const database = {
   information: {
     name: 'Asif Khan',
     aboutContent: "Think of me as Peter Petrelli from the show 'Heroes'. Basically I'm a quick study and can learn anything I need to accomplish my goals. Needless to say, when it comes to developing apps; I promise to deliver and do what excites (:.",
-    age: 22,
-    phone: '',
+    age: 25,
+    phone: '+1 647-819-7059',
     nationality: 'Bengali',
     language: 'English, Bangla, Urdu, Hindi',
-    email: '',
+    email: 'thecodedkhan@gmail.com',
     address: 'Toronto',
     freelanceStatus: 'Available',
     socialLinks: {
@@ -18,7 +18,7 @@ const database = {
       behance: '',
       linkedin: 'https://www.linkedin.com/in/codedkhan/',
       dribbble: '',
-      github: 'https://github.com'
+      github: 'https://github.com/asif-a-khan'
     },
     brandImage: '/images/300.jpg',
     aboutImage: '/images/750.jpg',
@@ -309,28 +309,28 @@ const database = {
   ],
   experience: {
     workingExperience: [
-      // {
-      //   id: 1,
-      //   year: "2020 - 2021",
-      //   position: "Frontend Web Developer",
-      //   company: "Abc Company",
-      //   details: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro."
-      // },
+      {
+        id: 1,
+        year: "2020 - 2021",
+        position: "Full Stack Engineer",
+        company: "Cellular Magician",
+        details: "Tasked with building a point of sale application for a cellphone repair franchise. Being the sole engineer for 2 years and the lead engineer for the last year; This monolithic task was accomplished with careful planning and swift execution. The tech stack used was: Apache, PHP, Laravel, MySQL, Redis, HTML5/CSS, SCSS, Javascript/Typescript, VueJS, and NuxtJS."
+      },
     ],
     educationExperience: [
       {
         id: 1,
-        year: "2020 - 2021",
+        year: "2020",
         graduation: "Web Development Immersive",
         university: "Juno College of Technology",
-        details: "12 week intensive bootcamp focused in react development. Students are expected to develop projects from scratch every week in order to master HTML/CSS/Javascript fundamentals."
+        details: "12 week intensive bootcamp focused in ReactJS and NuxtJS. Students are expected to develop projects from scratch every week in order to master HTML/CSS/Javascript fundamentals."
       },
       {
         id: 2,
-        year: "2018 - Current",
+        year: "2016 - 2020",
         graduation: "Honours Bachelor of Science (In Progress)",
         university: "University of Toronto",
-        details: "4 year honours program majoring in computer science and minoring in statistics. Took a break in my sophomore year to pursue an education in web/native app development."
+        details: "4 year honours program majoring in computer science."
       },
       {
         id: 3,
@@ -479,8 +479,8 @@ const database = {
     // }
   ],
   contactInfo: {
-    phoneNumbers: ['+012-3456-7891', '+012-3456-7892'],
-    emailAddress: ['thecodedkhan@gmail.com', 'asif-khan@viberant.ca'],
+    phoneNumbers: ['+1 647-819-7059''],
+    emailAddress: ['thecodedkhan@gmail.com'],
     address: "Bayview VIllage, Toronto ON, M2K"
   }
 }
