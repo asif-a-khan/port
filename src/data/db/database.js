@@ -479,7 +479,7 @@ const database = {
     // }
   ],
   contactInfo: {
-    phoneNumbers: ['+1 647-819-7059''],
+    phoneNumbers: ['+1 647-819-7059'],
     emailAddress: ['thecodedkhan@gmail.com'],
     address: "Bayview VIllage, Toronto ON, M2K"
   }
