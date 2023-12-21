@@ -311,16 +311,23 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: "2020 - 2021",
+        year: "2020 - 2022",
         position: "Full Stack Engineer",
         company: "Cellular Magician",
         details: "Tasked with building a point of sale application for a cellphone repair franchise. Being the sole engineer for 2 years and the lead engineer for the last year; This monolithic task was accomplished with careful planning and swift execution. The tech stack used was: Apache, PHP, Laravel, MySQL, Redis, HTML5/CSS, SCSS, Javascript/Typescript, VueJS, and NuxtJS."
+      },
+      {
+        id: 1,
+        year: "2022 - 2023",
+        position: "Software Engineer",
+        company: "Consilience Analytics",
+        details: "Consilience Analytics provides 3D maps generated from drone images to architects, engineers and project managers. I was part of the team based in Toronto and my day to day tasks would include implementing new features both on the backend and front end of both our client and admin platforms. Aside from this I would help the rest of the team with bug fixes and creating UI libraries for the company to use within our tasks."
       },
     ],
     educationExperience: [
       {
         id: 1,
-        year: "2020",
+        year: "2020 - 2021",
         graduation: "Web Development Immersive",
         university: "Juno College of Technology",
         details: "12 week intensive bootcamp focused in ReactJS and NuxtJS. Students are expected to develop projects from scratch every week in order to master HTML/CSS/Javascript fundamentals."
@@ -328,7 +335,7 @@ const database = {
       {
         id: 2,
         year: "2016 - 2020",
-        graduation: "Honours Bachelor of Science (In Progress)",
+        graduation: "Honours Bachelor of Science",
         university: "University of Toronto",
         details: "4 year honours program majoring in computer science."
       },
