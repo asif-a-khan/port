@@ -20,10 +20,10 @@ const database = {
       dribbble: '',
       github: 'https://github.com/asif-a-khan'
     },
-    brandImage: '/images/300.jpg',
-    aboutImage: '/images/750.jpg',
-    aboutImageLg: '/images/750.jpg',
-    cvfile: '/files/Asif_Khan_Resume_.pdf'
+    brandImage: '/images/pfp.jpg',
+    aboutImage: '/images/pfp.jpg',
+    aboutImageLg: '/images/pfp.jpg',
+    cvfile: '/files/Asif_Khan_Resume.pdf'
   },
   services: [
     {
@@ -78,19 +78,19 @@ const database = {
       value: 100
     },
     {
-      title: "Javascript",
+      title: "Javascript ES6+/Node JS",
       value: 100
     },
     {
-      title: "jQuery",
+      title: "Typescript",
       value: 100
     },
     {
-      title: "ReactJS",
+      title: "React/Next JS",
       value: 100
     },
     {
-      title: "Redux",
+      title: "Vue/Nuxt JS",
       value: 100
     },
     {
@@ -98,25 +98,29 @@ const database = {
       value: 100
     },
     {
-      title: "Firebase",
+      title: "Node JS",
       value: 100
     },
     {
-      title: "NodeJS",
+      title: "Express JS",
       value: 100
     },
     {
-      title: "ExpressJS",
+      title: "Rust/Axum",
       value: 100
     },
     {
-      title: "MongoDB",
+      title: "MongoDB/firebase/Supabase/MySQL/PostgresSQL",
       value: 100
     },
     {
-      title: "Python",
+      title: "Python/Django",
       value: 100
-    }
+    },
+    {
+      title: "PHP/Laravel",
+      value: 100
+    },
   ],
   portfolios: [
     {
@@ -125,8 +129,8 @@ const database = {
       subtitle: "[ HTML5 | CSS3/SASS | JQeury ]",
       imageUrl: "/images/4poke.jpg",
       largeImageUrl: ["/images/portfolio-image-1-lg.jpg"],
-      url: 'https://calvin-asif-project-4.github.io/calvin-barrett-asif-khan-project-4/',
-      github: 'https://github.com/calvin-asif-project-4/calvin-barrett-asif-khan-project-4'
+      url: 'https://codedpokedex.netlify.app',
+      github: 'https://github.com/asif-a-khan/codedPokedex'
     },
     {
       id: 2,
@@ -148,30 +152,30 @@ const database = {
     },
     {
       id: 4,
-      title: "Coded Snaps (Desktop)",
-      subtitle: "[ HTML5 | CSS3/SASS | ES6+ Javascript | ReactJS | Firebase ]",
-      imageUrl: "/images/4snap.jpg",
-      largeImageUrl: ["/images/portfolio-image-3-lg.jpg"],
-      url: 'https://codedsnaps.netlify.app/',
-      github: 'https://github.com/asif-a-khan/codedSnaps'
+      title: "Coded Games",
+      subtitle: "[ HTML5 | CSS3/Chakra UI | ES6+ Javascript | NextJS ]",
+      imageUrl: "/images/games.png",
+      largeImageUrl: ["/images/games.png"],
+      url: 'https://codedgames.netlify.app/',
+      github: 'https://github.com/asif-a-khan/codedGames'
     },
     {
       id: 5,
-      title: "Coded Signal (Mobile) (Contact For Demo)",
-      subtitle: "[ ES6+ Javascript | React Native | Firebase ]",
-      imageUrl: "/images/4signal.jpg",
-      largeImageUrl: ["/images/portfolio-image-5-lg.jpg"],
-      url: 'https://twitter.com/CodedKhan/status/1356054712068550656?s=20',
-      github: 'https://github.com/asif-a-khan/codedSignal'
+      title: "Coded GPT",
+      subtitle: "[ ES6+ Javascript | CSS3 | NextJS | OPEN AI ]",
+      imageUrl: "/images/gpt.png",
+      largeImageUrl: ["/images/gpt.png"],
+      url: 'https://codedgpt.netlify.app/',
+      github: 'https://github.com/asif-a-khan/codedGpt'
     },
     {
       id: 6,
-      title: "Coded Slack",
-      subtitle: "[ ES6+ Javascript | React | Styled Components | Firebase ]",
-      imageUrl: "/images/slack.jpg",
-      largeImageUrl: ["/images/portfolio-image-6-lg.jpg"],
-      url: 'https://codedslack.netlify.app/',
-      github: 'https://github.com/asif-a-khan/codedSlack'
+      title: "Coded Weather",
+      subtitle: "[ ES6+ Javascript | React | OWM API ]",
+      imageUrl: "/images/weather.png",
+      largeImageUrl: ["/images/weather.png"],
+      url: 'https://codedweather.netlify.app/',
+      github: 'https://github.com/asif-a-khan/codedWeather'
     },
     // {
     //   id: 7,
@@ -312,7 +316,7 @@ const database = {
       {
         id: 1,
         year: "2020 - 2022",
-        position: "Full Stack Engineer",
+        position: "Technical Lead",
         company: "Cellular Magician",
         details: "Tasked with building a point of sale application for a cellphone repair franchise. Being the sole engineer for 2 years and the lead engineer for the last year; This monolithic task was accomplished with careful planning and swift execution. The tech stack used was: Apache, PHP, Laravel, MySQL, Redis, HTML5/CSS, SCSS, Javascript/Typescript, VueJS, and NuxtJS."
       },
@@ -320,8 +324,15 @@ const database = {
         id: 1,
         year: "2022 - 2023",
         position: "Software Engineer",
-        company: "Consilience Analytics",
-        details: "Consilience Analytics provides 3D maps generated from drone images to architects, engineers and project managers. I was part of the team based in Toronto and my day to day tasks would include implementing new features both on the backend and front end of both our client and admin platforms. Aside from this I would help the rest of the team with bug fixes and creating UI libraries for the company to use within our tasks."
+        company: "Unity Technologies",
+        details: "Our team was tasked with generating 3D maps using drone images. The technologies I used were: Typescript for creating scripts for the maps, F# at times when interacting with our .NET API and C# primarily when working with the engine."
+      },
+      {
+        id: 1,
+        year: "2023 - 2024",
+        position: "Chief Technology Officer",
+        company: "Zaytoon Business Solutions",
+        details: "This startup's focus was bringing financial inclusion to rural areas of Bangladesh by providing a robust agent banking solution. In addition to banking the platform allowed agents to offer other services such as: insurance, bill payments, travel ticket bookings, telemedicine consults and more."
       },
     ],
     educationExperience: [
