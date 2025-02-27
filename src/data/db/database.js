@@ -20,9 +20,9 @@ const database = {
       dribbble: '',
       github: 'https://github.com/asif-a-khan'
     },
-    brandImage: '/images/300.jpg',
-    aboutImage: '/images/750.jpg',
-    aboutImageLg: '/images/750.jpg',
+    brandImage: '/images/pfp.jpg',
+    aboutImage: '/images/pfp.jpg',
+    aboutImageLg: '/images/pfp.jpg',
     cvfile: '/files/Asif_Khan_Resume.pdf'
   },
   services: [
